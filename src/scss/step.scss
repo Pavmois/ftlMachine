@@ -1,0 +1,43 @@
+.step {
+    display: flex;
+    margin-top: 0px;
+    width: 150px;
+    height: 30px;
+    color: #FFFFFF;
+}
+
+.step__number{
+    display: flex;
+    margin-left: 0px;
+    margin-top: 3px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #EF483E;
+}
+
+.step__number-text{
+    width: 9px;
+    height: 20px;
+    margin-top: 2px;
+    margin-left: 7px;
+    font-family: Helvetica Neue;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.step__title{
+    width: 110px;
+    height: 30px;
+    margin-top: 0px;
+    margin-left: 8px;
+}
+
+@media screen and (max-width: 375px) {
+    .step{
+        margin-left: 16px;
+    }
+}

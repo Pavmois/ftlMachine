@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru"></html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>FTL Machine</title>
+	<link rel="stylesheet" type="text/css" href="dist/style.css">
+</head>
+<div class="body">
+    <div class="page">
+       <!--Шапка с названием-->
+       <h1 class="header">FTL: Прямая машина</h1>
+       <!--Шаги заказа-->
+       <div class="step">
+           <div class="step__number">
+               <h2 class="step__number-text">1</h2>
+           </div>
+           <h2 class="step__title">Маршрут</h2>
+       </div>
+       <!--Форма ввода маршрута-->
+       <div class="route">
+           <div class="route__form">
+               <h3 class="route__form-title">Откуда</h3>
+               <input placeholder="" class="route__form-input"/>
+           </div>
+           <div class="route__form">
+            <h3 class="route__form-title">Куда</h3>
+            <input class="route__form-input"/>
+        </div>
+       </div>
+       <!--Шаги заказа-->
+       <div class="step">
+         <div class="step__number">
+            <h2 class="step__number-text">2</h2>
+         </div>
+         <h2 class="step__title">Транспорт</h2>
+       </div>
+       <!--Форма параметров грузоподъёмности-->
+       <div class="transport">
+           <div class="transport__weight">
+               <div class="transport__weight-title">Грузоподъёмность</div>
+               <select class="transport__weight-select">
+                <option hidden>Не выбрана</option>
+                <option>Вариант 1</option>
+                <option>Вариант 2</option>
+                <option>Вариант 3</option>
+                <option>Вариант 4</option>
+                <option>Вариант 5</option>
+              </select>
+           </div>
+
+           <div class="transport__weight">
+            <div class="transport__weight-title">Способ загрузки</div>
+            <select style="color: black;" class="transport__weight-select">
+             <option style="color: black;">Задняя</option>
+             <option>Верхняя</option>
+             <option>Боковая</option>
+           </select>
+        </div>
+       </div>
+       <!--Шаги заказа-->
+       <div class="step">
+         <div class="step__number">
+            <h2 class="step__number-text">3</h2>
+         </div>
+         <h2 class="step__title">Груз</h2>
+       </div>
+       <!--Формы Груза-->
+       <div class="cargo">
+           <div class="cargo__type">
+            <div class="cargo__type-title">Тип груза</div>
+            <select class="cargo__type-select">
+                <option >Не выбрана</option>
+            </select>
+           </div>
+           <!--Класс опасности-->
+           <div class="cargo__danger">
+               <div class="cargo__danger-class">
+                <div class="cargo__type-title">Класс опасности</div>
+                <select class="cargo__type-select">
+                    <option hidden>Не выбран</option>
+                    <option>Класс 5 - Окислы</option>
+                </select>
+               </div>
+               <!--Объявленная ценность-->
+               <div class="cargo__danger-value">
+                <h3 class="cargo__danger-title">Объявленная ценность, &#8381;</h3>
+                <input class="cargo__danger-input" value="&le;1"/>
+               </div>
+           </div>
+           <div class="cargo__temp">
+               <div class="cargo__temp-block">
+                    <label style="margin-left: 0px"><input type="checkbox" class="js-show-form"><span>&#10004;</span></label>
+                <h3 class="cargo__temp-title">Требуется температурный режим</h3>
+               </div>
+           <form class="js-form hidden">
+                <label class="labelTemp">От, &deg;С
+                  <input class="inpTemp" type="text"/>
+                </label>
+                <label class="labelTemp">До, &deg;С 
+                  <input class="inpTemp" type="text"/>
+                </label>
+                <label>
+                <button type="button" onclick="main2()" id="btn">Отправить</button>
+                </label>
+           </div>
+       </div>
+       <!--Шаги заказа-->
+       <div class="step">
+         <div class="step__number">
+            <h2 class="step__number-text">4</h2>
+         </div>
+         <h2 class="step__title">Время</h2>
+       </div>
+       <!--Время-->
+       <div class="time">
+           <div class="time__title">
+               <div class="time__title-left">Когда прибыть на точку</div>
+               <div class="time__title-right">700км в день</div>
+           </div>
+           <!--Адрес-->
+           <div class="time__address" >
+               <div class="time__address-block">
+                   <div class="address__block-circle" id="circle">
+                       <div class="block__circle-mini"></div>
+                   </div>
+                   <div class="address__block-form">Адрес не указан</div>
+               </div>
+               <button type='button' class="time__address-btn" onclick="changeColor(event)">НЕ ВЫБРАНО</button>
+           </div>
+           <div class="time__address">
+            <div class="time__address-block">
+                <div class="address__block-circle" style="background-color: white;" id="circle2">
+                    <div class="block__circle-mini"></div>
+                </div>
+                <div class="address__block-form">Адрес не указан</div>
+            </div>
+            <button type='button' class="time__address-btn" onclick="changeColor2(event)">НЕ ВЫБРАНО</button>
+        </div>
+           <!--Комментарий-->
+           <div class="time__comment">
+               <div class="time__comment-title">Комментарий к заказу</div>
+               <input class="time__comment-input" value="Укажите особенности въезда на территорию склада или подъезда к адресу"/>
+           </div>
+           <!--Подсказка-->
+           <div class="prompt">
+               <div class="promt__text">Для расчета стоимости необходимо ввести параметры груза, пункты отправки и прибытия.</div>
+           </div>
+       </div>
+    </div>
+    <script src="dist/bundle.js"></script>
+</div>

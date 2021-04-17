@@ -1,0 +1,10 @@
+import './js/index.js';
+import './scss/cargo.scss';
+import './scss/header.scss';
+import './scss/page.scss';
+import './scss/prompt.scss';
+import './scss/route.scss';
+import './scss/step.scss';
+import './scss/style.scss';
+import './scss/time.scss';
+import './scss/transport.scss';

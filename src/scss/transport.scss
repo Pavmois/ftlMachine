@@ -1,0 +1,58 @@
+.transport{
+    display: flex;
+    justify-content: space-between;
+    width: 356px;
+    height: 68px;
+    margin-top: 16px;
+    margin-bottom: 40px;
+}
+
+.transport__weight{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 172px;
+    height: 100%;
+}
+
+.transport__weight-title{
+    width: 100%;
+    height: 16px;
+    font-family: Helvetica Neue;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 16px;
+    color: #FFFFFF;
+}
+
+.transport__weight-select{
+    width: 100%;
+    height: 44px;
+    cursor: pointer;
+}
+
+select {
+    color: #aaa; /* Цвет элемента по умолчанию */
+    cursor: pointer;
+}
+
+select option:first-child{
+    color: #CFCFCF;
+}
+
+select:focus {
+    color: rgb(0, 0, 0);
+}
+
+@media screen and (max-width: 375px) {
+    .transport{
+        width: 343px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .transport__weight{
+        width: 165px;
+    }
+}

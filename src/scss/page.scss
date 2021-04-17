@@ -1,0 +1,33 @@
+.page {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-left: 170px;
+
+}
+
+@media screen and (max-width: 768px) {
+    .page{
+        padding: 0;
+        width: 95vw;;
+        margin-left: 20px;
+        background-color: #343539;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .page{
+        padding: 0;
+        margin: 0;
+        left: 20px;
+        width: 375px;      
+        background-color: #343539;
+        padding-bottom: 120px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .page{
+        left: 0px;
+    }
+}
